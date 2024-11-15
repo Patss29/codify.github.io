@@ -94,10 +94,11 @@
 
                         <label for="password_reg" class="form-label mt-4">Password</label>
                         <input type="password" id="password_reg" name="password_reg" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required autocomplete="new-password">
-                        <button type="submit" class="btn btn-block mt-4" id="signupBtn">Sign up</button>
-                    </form>
 
-                    <div id="error-message" style="color: red; display: none;"></div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-block mt-4" id="signupBtn">Sign up</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

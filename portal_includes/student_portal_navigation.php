@@ -10,7 +10,6 @@
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link text-black" href="student_portal.php">Home</a></li>
                 <li class="nav-item"><a class="nav-link text-black" href="student_event.php">Events</a></li>
-            </ul>
         </div>
     </div>
 </nav>
