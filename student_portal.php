@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Portal</title>
-    <script src="js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
     <link rel="stylesheet" href="style/student_portal.css">
 </head>
 
 <main>
     <?php include 'portal_includes/student_portal_navigation.php'; ?>
+
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Logout Confirmation</h5>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to log out?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="confirmLogoutBtn">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="container">
         <h3 class="mt-4 mb-4" style="font-weight: bold;">Dashboard</h3> 
@@ -142,10 +159,26 @@
     </div>
 </main>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+
     <script>
         function toggleSidebar() {
             document.body.classList.toggle("collapsed");
         }
+
+        const logoutBtn = document.getElementById('logoutBtn');
+        const logoutModal = new bootstrap.Modal(document.getElementById('logoutModal'));
+        const confirmLogoutBtn = document.getElementById('confirmLogoutBtn');
+
+        logoutBtn.addEventListener('click', function() {
+            logoutModal.show();
+        });
+
+        confirmLogoutBtn.addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
     </script>
 
 </body>

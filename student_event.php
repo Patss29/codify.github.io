@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events</title>
     <script src="js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.css">
     <link rel="stylesheet" href="style/student_portal.css">
     <link rel="stylesheet" href="style/student_event.css">

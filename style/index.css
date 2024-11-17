@@ -16,7 +16,7 @@ header {
 }
 
 ul li a:hover {
-    color: #6256CA;
+    color: #6256CA !important;
 }
 
 .colored-last-word .last-word {

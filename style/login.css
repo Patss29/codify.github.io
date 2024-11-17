@@ -11,6 +11,10 @@ body {
     font-weight: bold;
 }
 
+#loginBtn:hover {
+    background-color: #5349ad;
+}
+
 .input-field {
     background-color: #f0f0f0; 
 }
@@ -20,8 +24,17 @@ body {
     height:4rem;
 }
 
-.btnRegister{
-    border:none;
+.btnRegister {
+    background-color: transparent;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.btnRegister:hover {
+    color: #4d46b0;
 }
 
 #signupBtn {
@@ -29,6 +42,10 @@ body {
     color:white;
     font-weight: bold;
     border-radius:5px;
+}
+
+#signupBtn:hover {
+    background-color: #5349ad;
 }
 
 #loginContainer{
