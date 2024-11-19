@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.6/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="bootstrap5/css/sweetalert2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/login.css">
 </head>
 
@@ -34,7 +33,7 @@
         }
 
         #backBtn i {
-            color: #6256CA;  /* Set the icon color to white or any color */
+            color: #6256CA;
         }
     </style>
 
@@ -104,26 +103,36 @@
         <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
             <div class="modal-content w-75">
                 <div class="modal-header">
+                    <h3 class="text-center" id="Modal2" style="font-weight:bold;">Sign-Up</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-4">
-                    <h3 class="text-center" id="Modal2" style="font-weight:bold;">Sign-Up</h3>
-                    <form id="register-form" method="POST" action="functions/user_login_register.php">
-                        <label for="firstName" class="form-label">First Name</label>
-                        <input type="text" class="form-control input-field" id="firstName" name="firstName" required>
+                    <form id="register-form" method="POST" action="functions/user_login_register.php" class="was-validated">
+                        <label for="firstname_reg" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstname_reg" name="firstname_reg" required>
+                        <div class="invalid-feedback">
+                            Please fill up the Firstname
+                        </div>
 
-                        <label for="lastName" class="form-label mt-4">Last Name</label>
-                        <input type="text" class="form-control input-field" id="lastName" name="lastName" required>
+                        <label for="lastname_reg" class="form-label mt-4">Last Name</label>
+                        <input type="text" class="form-control" id="lastname_reg" name="lastname_reg" required>
+                        <div class="invalid-feedback">
+                            Please fill up the Lastname
+                        </div>
 
                         <label for="email_reg" class="form-label mt-4">Email</label>
-                        <input type="text" class="form-control input-field" id="email_reg" name="email_reg" required>
+                        <input type="email" class="form-control" id="email_reg" name="email_reg" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid Email
+                        </div>
 
                         <label for="password_reg" class="form-label mt-4">Password</label>
-                        <input type="password" class="form-control input-field" id="password_reg" name="password_reg" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required autocomplete="new-password">
-
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-block mt-4" id="signupBtn">Sign up</button>
+                        <input type="password" id="password_reg" name="password_reg" class="form-control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required autocomplete="new-password">
+                        <div class="invalid-feedback">
+                            Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters
                         </div>
+
+                        <button type="submit" class="btn btn-block mt-4" id="signupBtn">Sign up</button>
                     </form>
                 </div>
             </div>
@@ -131,12 +140,11 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bootstrap5/js/bootstrap.min.js"></script>
     <script src="jQuery/jquery-3.7.1.min.js"></script>
     <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
     <script src="js/student_login.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.6/dist/sweetalert2.all.min.js"></script>
+    <script src="bootstrap5/js/sweetalert2.all.min.js"></script>
     <script src="js/student_register.js"></script>
 
     <script>
@@ -149,25 +157,3 @@
 
 </body>
 </html>
-
-<!--<script>
-        //Eto since wala pa yung sa php nag try lang muna ako gumawa yung modal
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        const username = document.getElementById('idLogin').value;
-        const password = document.getElementById('password').value;
-      
-        let message = '';
-            if (username === 'admin' && password === 'password') {
-                message = 'Login successful! Welcome.';
-            } else {
-                message = 'Incorrect username or password. Please try again.';
-            }
-
-        document.getElementById('popup-message').textContent = message;
-    
-        const modal = new bootstrap.Modal(document.getElementById('popupModal'));
-        modal.show();
-        });
-    </script>-->

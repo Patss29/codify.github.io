@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('#signupBtn').on('submit', function(event) {
         event.preventDefault(); 
         $.ajax({
-            url: 'student_login.php', 
+            url: 'functions/user_login_register.php', 
             type: 'POST',
             data: $(this).serialize(), 
             success: function(response) {

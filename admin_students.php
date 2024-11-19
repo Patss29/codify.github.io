@@ -67,6 +67,9 @@
         </div>
     
     </div>
+
+    <script src="bootstrap5/js/bootstrap.min.js"></script>
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
     
     <script>
         function toggleSidebar() {

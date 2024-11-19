@@ -1,4 +1,6 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 
     include_once '../db/db_conn.php';
 
@@ -12,8 +14,8 @@
         exit;
     }
 
-    $firstName_reg = $_POST['firstName'];
-    $lastName_reg = $_POST['lastName'];
+    $firstName_reg = $_POST['firstname_reg'];
+    $lastName_reg = $_POST['lastname_reg'];
     $email_reg = $_POST['email_reg'];
     $password_reg = $_POST['password_reg'];
 
